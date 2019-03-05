@@ -20,7 +20,7 @@ public class TestBase {
 	
 	public static WebDriver driver;
 	public static Properties prop;
-	public  static EventFiringWebDriver e_driver;
+	public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
 	
 	public TestBase(){
@@ -41,7 +41,7 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "/Users/naveenkhunteta/Downloads/chromedriver");	
+			System.setProperty("webdriver.chrome.driver", "C:\\SeleniumDrivers\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("FF")){
