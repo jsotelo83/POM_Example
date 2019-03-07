@@ -20,18 +20,20 @@ public class LoginPageTest extends TestBase{
 	@BeforeMethod
 	public void setUp(){
 		initialization();
-		loginPage = new LoginPage();	
+		loginPage = new LoginPage();
+		homePage = new HomePage();
+		loginPage = homePage.clickOnLogInLink();
 	}
 	
 	@Test(priority=1)
 	public void loginPageTitleTest(){
 		String title = loginPage.validateLoginPageTitle();
-		Assert.assertEquals(title, "#1 Free CRM for Any Business: Online Customer Relationship Software");
+		Assert.assertEquals(title, "Log in - Execute Automation Employee App");
 	}
 	
 	@Test(priority=2)
 	public void crmLogoImageTest(){
-		boolean flag = loginPage.validateCRMImage();
+		boolean flag = loginPage.validatePageTittle();
 		Assert.assertTrue(flag);
 	}
 	
