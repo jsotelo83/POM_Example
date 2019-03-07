@@ -19,7 +19,9 @@ public class HomePage extends TestBase {
 	
 	@FindBy(xpath = "//a[contains(text(),'New Contact')]")
 	WebElement newContactLink;
-	
+
+	@FindBy(id = "loginLink")
+	WebElement logInLink;
 
 	@FindBy(xpath = "//a[contains(text(),'Deals')]")
 	WebElement dealsLink;
@@ -49,6 +51,11 @@ public class HomePage extends TestBase {
 	public DealsPage clickOnDealsLink(){
 		dealsLink.click();
 		return new DealsPage();
+	}
+
+	public LoginPage clickOnLogInLink(){
+		logInLink.click();
+		return new LoginPage();
 	}
 	
 	public TasksPage clickOnTasksLink(){
